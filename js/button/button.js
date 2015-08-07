@@ -18,7 +18,7 @@ export default class Button extends React.Component{
     }
 
     return(
-              <button className="ui button">Follow</button>
+              <button className={className} >{this.props.label}</button>
           );
   }
 

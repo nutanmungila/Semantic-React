@@ -40,7 +40,7 @@ var App = (function (_React$Component) {
           null,
           React.createElement(Dropdown, { items: this.props.itemList }),
           React.createElement(Radiocomp, { items: this.props.itemList }),
-          React.createElement(Button, null),
+          React.createElement(Button, { label: "Nutan", secondary: true }),
           React.createElement(AnimatedButton, { visible: "see", hidden: "hide" })
         );
       }
@@ -146,8 +146,8 @@ var Button = (function (_React$Component) {
 
         return React.createElement(
           "button",
-          { className: "ui button" },
-          "Follow"
+          { className: className },
+          this.props.label
         );
       }
     }
