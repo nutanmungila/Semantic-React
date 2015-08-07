@@ -18,7 +18,7 @@ class App extends React.Component {
             <div>
               <Dropdown items={this.props.itemList}/>
               <Radiocomp items={this.props.itemList} />
-              <Button label={<Icon name="student"/>}/>
+              <Button label="nutan" secondary={true}/>
               <AnimatedButton vertical={true} visible="see" hidden={<Icon name="student"/>}/>
               <Icon name="student"/>
             </div>

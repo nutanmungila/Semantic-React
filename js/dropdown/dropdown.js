@@ -2,7 +2,7 @@
 import React from 'react';
 import Popup from './popup';
 
-class Dropdown extends React.Component {
+export default class Dropdown extends React.Component {
 
   constructor(props) {
       super(props);
@@ -22,10 +22,9 @@ class Dropdown extends React.Component {
   }
 
   componentDidMount(){
-    document.addEventListener("click",()=>{
-      this.setState({showPopup:false});
-    })
-
+      document.addEventListener("click",()=>{
+        this.setState({showPopup:false});
+      })
   }
 
   render(){
@@ -44,5 +43,3 @@ class Dropdown extends React.Component {
   }
 
 }
-
-export default Dropdown;

@@ -14,7 +14,7 @@ export default class Radiocomp extends React.Component{
 	render(){
 		return(<div>You Have Selected {this.state.rval}
 			       {this.props.items.map((item)=>{
-						return(<RadioItems key={item} itm={item} onSelectedItem={this.onItemSelectHandler}/>);
+						   return(<RadioItems key={item} itm={item} onSelectedItem={this.onItemSelectHandler}/>);
 					})}
 			   </div>);
 	}

@@ -42,7 +42,7 @@ var App = (function (_React$Component) {
           null,
           React.createElement(Dropdown, { items: this.props.itemList }),
           React.createElement(Radiocomp, { items: this.props.itemList }),
-          React.createElement(Button, { label: React.createElement(Icon, { name: "student" }) }),
+          React.createElement(Button, { label: "nutan", secondary: true }),
           React.createElement(AnimatedButton, { vertical: true, visible: "see", hidden: React.createElement(Icon, { name: "student" }) }),
           React.createElement(Icon, { name: "student" })
         );
@@ -144,6 +144,10 @@ var Button = (function (_React$Component) {
       value: function render() {
 
         var className = "ui button ";
+        var value = "button";
+        if (this.props.label) {
+          value = this.props.label;
+        }
         if (this.props.primary) {
           className = className + "primary";
         }
@@ -152,12 +156,13 @@ var Button = (function (_React$Component) {
         }
         if (this.props.icon) {
           className = className + "icon";
+          value = this.props.icon;
         }
 
         return React.createElement(
           "button",
           { className: className },
-          this.props.label
+          value
         );
       }
     }

@@ -12,11 +12,10 @@ export default class RadioItems extends React.Component{
 	}
 
 	render(){
-		return(
-				<div className="ui radio checkbox">
-					<input type="radio" name="sex" value="male" onClick={this.onClickRadio}/>
-					<label>{this.props.itm}</label>
-				</div>
+		return( <div className="ui radio checkbox">
+							<input type="radio" name="sex" value="male" onClick={this.onClickRadio}/>
+							<label>{this.props.itm}</label>
+						</div>
 			  );
 	}
 }

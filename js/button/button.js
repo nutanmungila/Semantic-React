@@ -9,6 +9,10 @@ export default class Button extends React.Component{
   render(){
 
     var className = "ui button ";
+    var value = "button";
+    if(this.props.label){
+      value = this.props.label;
+    }
     if(this.props.primary){
       className = className+"primary";
     }
@@ -17,10 +21,11 @@ export default class Button extends React.Component{
     }
     if(this.props.icon){
       className = className+"icon";
+      value = this.props.icon;
     }
 
     return(
-              <button className={className} >{this.props.label}</button>
+              <button className={className} >{value}</button>
           );
   }
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import Popupitem from './popupitem';
 
-class Popup extends React.Component{
+export default class Popup extends React.Component{
 
   	constructor(props){
   		super(props);
@@ -14,14 +14,12 @@ class Popup extends React.Component{
   	}
 
 	  render(){
-  		return(
-  				<div className={'menu ' + this.props.className } >
-  					{this.props.elts.map((item)=> {
-  						return(<Popupitem  key={item} onSelectedItem={this.onClickhandler} itm={item}/>);
-  					})}
-  				</div>
+  		return( <div className={'menu ' + this.props.className } >
+      					{this.props.elts.map((item)=> {
+      						return(<Popupitem  key={item} onSelectedItem={this.onClickhandler} itm={item}/>);
+      					})}
+      				</div>
   		      );
 	}
 
 }
-export default Popup;

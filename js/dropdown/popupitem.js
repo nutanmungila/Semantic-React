@@ -1,10 +1,10 @@
 'use strict'
 import React from 'react';
-class Popupitem extends React.Component{
+export default class Popupitem extends React.Component{
 
 	constructor(props){
-		super(props);
-		this.onClickPopupitem = this.onClickPopupitem.bind(this);
+			super(props);
+			this.onClickPopupitem = this.onClickPopupitem.bind(this);
 	}
 
 	onClickPopupitem(e){
@@ -12,8 +12,6 @@ class Popupitem extends React.Component{
 	}
 
 	render(){
-		return(<div className="item" onClick={this.onClickPopupitem}>{this.props.itm}</div>);
+			return(<div className="item" onClick={this.onClickPopupitem}>{this.props.itm}</div>);
 	}
 }
-
-export default Popupitem;
