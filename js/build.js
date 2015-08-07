@@ -21,6 +21,8 @@ var Button = _interopRequire(require("./button/button"));
 
 var AnimatedButton = _interopRequire(require("./button/animatedbutton"));
 
+var Icon = _interopRequire(require("./icon/icon"));
+
 var App = (function (_React$Component) {
   function App(props) {
     _classCallCheck(this, App);
@@ -41,7 +43,8 @@ var App = (function (_React$Component) {
           React.createElement(Dropdown, { items: this.props.itemList }),
           React.createElement(Radiocomp, { items: this.props.itemList }),
           React.createElement(Button, { label: "Nutan", secondary: true }),
-          React.createElement(AnimatedButton, { visible: "see", hidden: "hide" })
+          React.createElement(AnimatedButton, { visible: "see", hidden: "hide" }),
+          React.createElement(Icon, { value: "student" })
         );
       }
     }
@@ -55,7 +58,7 @@ App.defaultProps = { itemList: ["aa", "bb", "cc", "dd", "ff", "gg", "hh", "ii"] 
 
 React.render(React.createElement(App, null), document.body);
 
-},{"./button/animatedbutton":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\animatedbutton.js","./button/button":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\button.js","./dropdown/dropdown":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\dropdown\\dropdown.js","./radiobutton/Radiocomp":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\radiobutton\\Radiocomp.js","react":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\node_modules\\react\\react.js"}],"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\animatedbutton.js":[function(require,module,exports){
+},{"./button/animatedbutton":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\animatedbutton.js","./button/button":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\button.js","./dropdown/dropdown":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\dropdown\\dropdown.js","./icon/icon":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\icon\\icon.js","./radiobutton/Radiocomp":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\radiobutton\\Radiocomp.js","react":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\node_modules\\react\\react.js"}],"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\button\\animatedbutton.js":[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -335,6 +338,44 @@ var Popupitem = (function (_React$Component) {
 })(React.Component);
 
 module.exports = Popupitem;
+
+},{"react":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\node_modules\\react\\react.js"}],"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\icon\\icon.js":[function(require,module,exports){
+"use strict";
+
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _get = function get(object, property, receiver) { var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc && desc.writable) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _inherits = function (subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
+
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+var React = _interopRequire(require("react"));
+
+var Icon = (function (_React$Component) {
+  function Icon(props) {
+    _classCallCheck(this, Icon);
+
+    _get(Object.getPrototypeOf(Icon.prototype), "constructor", this).call(this, props);
+  }
+
+  _inherits(Icon, _React$Component);
+
+  _createClass(Icon, {
+    render: {
+      value: function render() {
+        var className = this.props.value + " icon";
+        return React.createElement("i", { className: className });
+      }
+    }
+  });
+
+  return Icon;
+})(React.Component);
+
+module.exports = Icon;
 
 },{"react":"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\node_modules\\react\\react.js"}],"C:\\Users\\nutanm\\Documents\\GitHub\\Semantic-React\\js\\radiobutton\\RadioItems.js":[function(require,module,exports){
 "use strict";

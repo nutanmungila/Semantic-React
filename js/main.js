@@ -3,7 +3,8 @@ import React from 'react';
 import Dropdown from './dropdown/dropdown';
 import Radiocomp from './radiobutton/Radiocomp';
 import Button from './button/button';
-import AnimatedButton from './button/animatedbutton'
+import AnimatedButton from './button/animatedbutton';
+import Icon from './icon/icon';
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ class App extends React.Component {
               <Radiocomp items={this.props.itemList} />
               <Button label="Nutan" secondary={true}/>
               <AnimatedButton visible="see" hidden="hide"/>
-
+              <Icon value="student"/>
             </div>
         );
   }
