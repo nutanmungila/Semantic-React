@@ -19,7 +19,7 @@ class App extends React.Component {
               <Dropdown items={this.props.itemList}/>
               <Radiocomp items={this.props.itemList} />
               <Button label={<Icon name="student"/>}/>
-              <AnimatedButton visible="see" hidden="hide"/>
+              <AnimatedButton vertical={true} visible="see" hidden={<Icon name="student"/>}/>
               <Icon name="student"/>
             </div>
         );

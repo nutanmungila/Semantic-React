@@ -43,7 +43,7 @@ var App = (function (_React$Component) {
           React.createElement(Dropdown, { items: this.props.itemList }),
           React.createElement(Radiocomp, { items: this.props.itemList }),
           React.createElement(Button, { label: React.createElement(Icon, { name: "student" }) }),
-          React.createElement(AnimatedButton, { visible: "see", hidden: "hide" }),
+          React.createElement(AnimatedButton, { vertical: true, visible: "see", hidden: React.createElement(Icon, { name: "student" }) }),
           React.createElement(Icon, { name: "student" })
         );
       }
@@ -86,7 +86,12 @@ var AnimatedButton = (function (_React$Component) {
     render: {
       value: function render() {
         var className = "ui animated button";
-
+        if (this.props.vertical) {
+          className = className + " vertical";
+        }
+        if (this.props.fade) {
+          className = className + " fade";
+        }
         return React.createElement(
           "div",
           { className: className, tabIndex: "0" },
