@@ -7,7 +7,7 @@ export default class Icon extends React.Component {
   }
 
   render(){
-    var className = this.props.value+" icon";
+    var className = this.props.name+" icon";
     return(
             <i className={className}></i>
           );
